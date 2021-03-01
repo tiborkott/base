@@ -27,6 +27,7 @@ These are the things  I've added or changed in the README
     ./gradlew test
 ```
 ----------------------------------------------------
+CHANGES MADE BY BRANCH B 
 ## Overview
 
 ### Structure
