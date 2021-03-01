@@ -28,6 +28,7 @@ These are the things  I've added or changed in the README
 ```
 ----------------------------------------------------
 CHANGES MADE WITH BRANCH A
+CHANGES MADE BY BRANCH B
 ## Overview
 
 ### Structure
