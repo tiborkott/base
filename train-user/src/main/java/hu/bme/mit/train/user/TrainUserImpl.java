@@ -12,10 +12,10 @@ public class TrainUserImpl implements TrainUser {
 		this.controller = controller;
 	}
 
-	//@Override
-	//public boolean getAlarmFlag() {
-	//	return false;
-	//}
+	@Override
+	public boolean getAlarmFlag() {
+		return false;
+	}
 
 	@Override
 	public int getJoystickPosition() {
