@@ -19,15 +19,10 @@ public class TrainSensorTest {
         TrainSensor = new TrainSensorImpl(mTrainController, mTrainUser);
     }
 
-
-    @Test
-    public void CheckSpeedLimitTest() {
-        Assert.assertEquals(10, 10);
-    }
-
     @Test
     public void AbsoluteMarginMinTest() {
         TrainSensor.overrideSpeedLimit(-1);
+        // Two times invocation, slower then 50% and under 0
         verify(mTrainUser, times(1)).setAlarmState(true);
     }
 
@@ -39,7 +34,7 @@ public class TrainSensorTest {
 
     @Test
     public void RelativeMarginTest() {
-        TrainSensor.overrideSpeedLimit(2);
+        TrainSensor.overrideSpeedLimit(10);
         verify(mTrainUser, times(1)).setAlarmState(true);
     }
 
