@@ -22,8 +22,8 @@ public class TrainSensorTest {
     @Test
     public void AbsoluteMarginMinTest() {
         TrainSensor.overrideSpeedLimit(-1);
-        // Two times invocation, slower then 50% and under 0
-        verify(mTrainUser, times(1)).setAlarmState(true);
+        //triggers both absolute margin and relative margin, two is expected
+        verify(mTrainUser, times(2)).setAlarmState(true);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class TrainSensorTest {
 
     @Test
     public void RelativeMarginTest() {
-        TrainSensor.overrideSpeedLimit(10);
+        TrainSensor.overrideSpeedLimit(1);
         verify(mTrainUser, times(1)).setAlarmState(true);
     }
 
