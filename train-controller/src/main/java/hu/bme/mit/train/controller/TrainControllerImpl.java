@@ -15,8 +15,10 @@ public class TrainControllerImpl implements TrainController {
 				thread.run();
 				try{
 					followSpeed();
-					thread.sleep(2000);
-				}catch(InterruptedException e){
+					thread.sleep(1000);
+				}catch (InterruptedException e){
+					//as suggested by sonarqube
+					thread.interrupt();
 					e.printStackTrace();
 				}
 			}
